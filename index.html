@@ -24,6 +24,26 @@
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
+
+        img {
+            image-orientation: from-image;
+        }
+
+        .row{
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+        /* div:nth-child(2) {
+            position: relative;
+        }
+
+        div:nth-child(1) {
+            left: 70px;
+            top: 300px;
+            z-index: 1;
+        } */
+
     </style>
 </head>
 
@@ -49,17 +69,25 @@
         </ul>       
     </nav>
 
-    <div class="jumbotron jumbotron-fluid bg-coverimg">
-        <div class="text-center text-light">
-            <div class="display-3 py-2"><b>Alwin Moo<b></div>
+        <div class="jumbotron jumbotron-fluid bg-coverimg text-center text-light">
+            <div class="display-3 py-2 font-weight-bold">Alwin Moo</div>
             <h5 class="py-2">Game Developer | Photographer</h5>
-            <div class="py-4"><button type="button" class="btn btn-light">Contact Me<div></button>
+            <div class="py-4 "><button type="button" class="btn btn-light">Contact Me</button></div>
         </div>
-    </div>
 
-    <div class="row col">
-        
-    </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-sm-4 rounded-lg bg-secondary px-4 py-4 w-sm-50 h-75">
+                    <h1 class="text-light display-4 font-weight-bold py-2">About Me</h1>
+                    <p class="font-weight-bold">Hi! I'm Alwin. I'm from Singapore. I graduated from Nanyang Polytechnic with a Diploma in Game Development and Technology, so I love making games (and playing them). I do freelance photography on the side for clients for their wedding, birthdays and corporate events.</p>
+                    <p class="font-weight-bold">I love reading, cooking, photography, listening to music, learning new languages, and playing the guitar and cajon.</p>
+                </div>
+
+                <div class="col-sm-4">
+                    <img class="img-fluid" src="images/self-main.jpg">
+                </div>
+            </div>
+        </div>
 
 </body>
 
