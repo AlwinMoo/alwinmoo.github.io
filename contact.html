@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Alwin Moo | HOME</title>
+    <title>Alwin Moo | CONTACT ME</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,6 +14,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        function validateForm()
+        {
+            //get input fields to send
+            //document.getElementById('status').innerHTML = "Sending...";
+            formData = {
+                'name'  : $('input[name=name]').val(),
+                'email'    : $('input[name=email]').val(),
+                'subject'  : $('input[name=subject]').val(),
+                'message'  : $('textarea[name=message]').val()
+            };
+
+            $.ajax({
+                url : "mail.php",
+                type: "POST",
+                data: formData,
+                success: function(data, textStatus, jqXHR)
+                {
+                    $('#status').text(data.message);
+                    if (data.code)
+                        $('#contact-form').closest('form').find("input[type=text], textarea").val("");
+                },
+                error: function(jqXHR, textStatus, errorThrown)
+                {
+                    $('#status').text(jqXHR);
+                }
+            });
+        }
+    </script>
 
     <style>
         .bg-coverimg
@@ -41,7 +71,7 @@
     <nav class="navbar justify-content-center bg-dark navbar-dark navbar-expand">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link" href="#">Projects</a>
@@ -53,25 +83,83 @@
                 <a class="nav-link" href="resume.html">Resume</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
+                <a class="nav-link" href="#">Contact</a>
             </li>
         </ul>       
     </nav>
 
     <div class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center py-4">
             <div class="col-sm-4 text-light">
-                <div class="display-4 text-warning"> Get in touch </div>
+                <div class="display-4 text-warning py-3"> Get in touch </div>
                 <p>Interested in learning more about my work or how we can collaborate on an upcoming project? Reach out and I will gladly help you out!</p>
                 <p></p>
                 <p>amoo16@aol.com</p>
             </div>
-            <div class="col-sm-4 text-light">
-                <div class="display-4 text-warning"> Get in touch </div>
-                <p>Interested in learning more about my work or how we can collaborate on an upcoming project? Reach out and I will gladly help you out!</p>
-                <p></p>
-                <p>amoo16@aol.com</p>
+
+            <!--Grid column-->
+            <div class="col-sm-4 mb-md-0 mb-5 text-light py-2">
+
+                <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+                    <!--Grid row-->
+                    <div class="row">
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="name" name="name" class="form-control">
+                                <label for="name" class="">Your name</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                        <!--Grid column-->
+                        <div class="col-md-6">
+                            <div class="md-form mb-0">
+                                <input type="text" id="email" name="email" class="form-control">
+                                <label for="email" class="">Your email</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+    
+                    </div>
+                    <!--Grid row-->
+    
+                    <!--Grid row-->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="md-form mb-0">
+                                <input type="text" id="subject" name="subject" class="form-control">
+                                <label for="subject" class="">Subject</label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Grid row-->
+                    <div class="row">
+
+                        <!--Grid column-->
+                        <div class="col-md-12">
+    
+                            <div class="md-form">
+                                <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                                <label for="message">Your message</label>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <!--Grid row-->
+                </form>
+    
+                <div class="text-center text-md-left px-3">
+                    <a class="btn btn-outline-warning" onclick="validateForm()">Send</a>
+                </div>
+                
+                <div class="status"></div>
             </div>
+            <!--Grid column-->
+
         </div>
     </div>
 
