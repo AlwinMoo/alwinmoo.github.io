@@ -6,14 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <!-- jQuery library -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <!-- Popper JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <!-- Latest compiled JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
 
     <style>
         .bg-coverimg
@@ -23,27 +16,6 @@
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
-        }
-
-        img 
-        {
-            image-orientation: from-image;
-        }
-
-        .row
-        {
-            margin-left: 0;
-            margin-right: 0;
-        }
-
-        .text-fancyBlue
-        {
-            color: #0b7af3;
-        }
-
-        p
-        {
-            font-size: 20px;
         }
     </style>
 </head>
@@ -58,8 +30,11 @@
             <li class="nav-item dropdown">
                 <a class="nav-link" href="#">Projects</a>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="#">Gallery</a>
+            <li class="nav-link dropdown-hover"><a href="gallery.html">Gallery</a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="client-work.html">Client Work</a>
+                    <a class="dropdown-item" href="#">Personal Work</a>
+                </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="resume.html">Resume</a>
@@ -79,13 +54,13 @@
             <div class="row justify-content-center">
                 <div class="col-sm-4">
                     <div class="mx-4">
-                        <div class="text-fancyBlue display-2 py-2">About Me</div>
+                        <div class="text-fancy-blue display-2 py-2">About Me</div>
                         <p class="font-weight-bold">Hi! I'm Alwin. I'm from Singapore. I graduated from Nanyang Polytechnic with a Diploma in Game Development and Technology, so I love making games (and playing them). I do freelance photography on the side for clients for their wedding, birthdays and corporate events.</h5>
                         <p class ="pb-3">I love reading, cooking, photography, listening to music, learning new languages, and playing the guitar and cajon.</p>
                     </div>
 
                     <div class="mx-4">
-                        <div class="text-fancyBlue display-2 py-2">Contact</div>
+                        <div class="text-fancy-blue display-2 py-2">Contact</div>
                         <p>Interested in learning more about my work or how we can collaborate on an upcoming project? Reach out and I will gladly help you out!</p>
                         <p class="font-weight-bold pb-3">amoo16@aol.com</p>
                     </div>
@@ -97,6 +72,9 @@
             </div>
         </div>
 
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.js"></script>
 </body>
 
 </html>
