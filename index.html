@@ -19,27 +19,39 @@
         .bg-coverimg
         {
             background-image: url(images/cover.jpg);
-            background-position: center 90%;
+            background-position: center 70%;
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
         }
 
-        img {
+        img 
+        {
             image-orientation: from-image;
         }
 
-        .row{
+        .row
+        {
             margin-left: 0;
             margin-right: 0;
+        }
+
+        .text-fancyBlue
+        {
+            color: #0b7af3;
+        }
+
+        p
+        {
+            font-size: 20px;
         }
     </style>
 </head>
 
-<body class="bg-dark">
+<body class="bg-light">
 
-    <nav class="navbar justify-content-center bg-dark navbar-dark navbar-expand">
-        <ul class="navbar-nav">
+    <nav class="navbar justify-content-center navbar-light navbar-expand">
+        <ul class="navbar-nav font-weight-bold">
             <li class="nav-item">
                 <a class="nav-link" href="#">Home</a>
             </li>
@@ -56,28 +68,26 @@
     </nav>
 
         <div class="jumbotron jumbotron-fluid bg-coverimg text-center text-light">
-            <div class="display-3 pt-5 font-weight-bold">Alwin Moo</div>
-            <h5 class="pb-5">Game Developer | Photographer</h5>
+            <p></p>
+            <div class="display-1 pt-5 font-weight-bold">Alwin Moo</div>
+            <h4 class="pb-5">Game Developer | Photographer</h4>
+            <p></p>
             <!-- <div class="py-4"><button type="button" class="btn btn-light">Contact Me</button></div> -->
         </div>
 
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-sm-4">
-                    <div class="rounded-lg bg-secondary rounded-lg bg-secondary">
-                        <div class="mx-4">
-                            <div class="text-warning display-4 py-2">About Me</div>
-                            <p class="font-weight-bold">Hi! I'm Alwin. I'm from Singapore. I graduated from Nanyang Polytechnic with a Diploma in Game Development and Technology, so I love making games (and playing them). I do freelance photography on the side for clients for their wedding, birthdays and corporate events.</p>
-                            <p class ="pb-3">I love reading, cooking, photography, listening to music, learning new languages, and playing the guitar and cajon.</p>
-                        </div>
+                    <div class="mx-4">
+                        <div class="text-fancyBlue display-2 py-2">About Me</div>
+                        <p class="font-weight-bold">Hi! I'm Alwin. I'm from Singapore. I graduated from Nanyang Polytechnic with a Diploma in Game Development and Technology, so I love making games (and playing them). I do freelance photography on the side for clients for their wedding, birthdays and corporate events.</h5>
+                        <p class ="pb-3">I love reading, cooking, photography, listening to music, learning new languages, and playing the guitar and cajon.</p>
                     </div>
 
-                    <div class="rounded-lg bg-secondary rounded-lg bg-secondary">
-                        <div class="mx-4 my-4">
-                            <div class="text-warning display-4 py-2">Contact</div>
-                            <p>Interested in learning more about my work or how we can collaborate on an upcoming project? Reach out and I will gladly help you out!</p>
-                            <p class="font-weight-bold pb-3">amoo16@aol.com</p>
-                        </div>
+                    <div class="mx-4">
+                        <div class="text-fancyBlue display-2 py-2">Contact</div>
+                        <p>Interested in learning more about my work or how we can collaborate on an upcoming project? Reach out and I will gladly help you out!</p>
+                        <p class="font-weight-bold pb-3">amoo16@aol.com</p>
                     </div>
                 </div>
 
