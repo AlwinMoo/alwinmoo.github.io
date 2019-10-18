@@ -8,6 +8,7 @@
     
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
 
     <style>
         .bg-coverimg
@@ -62,28 +63,45 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-sm-4">
-                    <div class="mx-4">
+                    <div class="mx-4" data-aos="fade-in" data-aos-delay="500" data-aos-duration="2000">
                         <div class="text-fancy-blue display-2 py-2">About Me</div>
                         <p class="font-weight-bold">Hi! I'm Alwin. I'm from Singapore. I graduated from Nanyang Polytechnic with a Diploma in Game Development and Technology, so I love making games (and playing them). I do freelance photography on the side for clients for their wedding, birthdays and corporate events.</h5>
                         <p class ="pb-3">I love reading, cooking, photography, listening to music, learning new languages, and playing the guitar and cajon.</p>
                     </div>
 
-                    <div class="mx-4">
+                    <div class="mx-4" data-aos="fade-in" data-aos-once="true" data-aos-delay="200" data-aos-duration="2000">
                         <div class="text-fancy-blue display-2 py-2">Contact</div>
                         <p>Interested in learning more about my work or how we can collaborate on an upcoming project? Reach out and I will gladly help you out!</p>
-                        <p class="font-weight-bold pb-3">amoo16@aol.com</p>
+                        <ul style="list-style-type:none" class="pl-0 font-weight-bold">
+                            <li>
+                                <a class="m-2" href="https://instagram.com/_youtiao" target="_blank"><i class=" fab fa-instagram font-weight-normal"></i> @_youtiao</a>
+                            </li>
+                            <li>
+                                <a class="m-2" href="https://linkedin.com/in/alwin-moo" target="_blank"><i class="fab fa-linkedin font-weight-normal"></i> /alwin-moo</a>
+                            </li>
+                            <li>
+                                <a class="m-2" href="https://github.com/AlwinMoo" target="_blank"><i class="fab fa-github font-weight-normal"></i> /AlwinMoo</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-envelope-square m-2"></i>amoo16@aol.com
+                            </li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="col-sm-4">
+                <div class="col-sm-4 mt-sm-5" data-aos="fade-in" data-aos-delay="1000" data-aos-duration="2000">
                     <img class="img-fluid" src="images/self-main.jpg">
                 </div>
             </div>
         </div>
 
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init();</script>
+
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
 <script src="js/tether.min.js"></script>
 <script src="js/bootstrap.js"></script>
+
 </body>
 
 </html>
